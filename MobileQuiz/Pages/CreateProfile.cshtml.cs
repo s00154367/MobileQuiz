@@ -16,7 +16,7 @@ namespace MobileQuiz.Pages
         public void SelectIcon()
         {
 
-            if()
+           
         }
     }
 }
