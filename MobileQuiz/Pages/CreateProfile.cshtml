@@ -1,0 +1,42 @@
+﻿@page
+@model CreateProfileModel
+@{
+}
+
+<h2>Create Profile</h2>
+
+<form action="/action_page.php">
+    <div id="profileForm" class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name"><br><br>
+        <label for="quote">Quote:</label>
+        <input type="text" class="form-control" id="quote" name="quote"><br><br>
+
+        <label for="image">Choose Icon:</label><br />
+        <div id="stewie" class="card" style="max-width: 15%;">
+            <img class="card-img-top" width="100%" src="~/images/Stewie_Griffin.png" alt="choice">
+            <div class="card-body">
+                <h3 class="card-title">Stewie Griffin</h3>
+                <a href="#" class="btn btn-primary" id="btnStewie">Choose</a>
+            </div>
+        </div>
+        <div id="apu" class="card" style="max-width: 15%; ">
+            <img class="card-img-top" width="100%"  src="~/images/Apu.png" alt="choice">
+            <div class="card-body">
+                <h3 class="card-title">Apu</h3>
+                <a href="#" class="btn btn-primary" id="btnApu">Choose</a>
+            </div>
+        </div>
+
+        <div id="roger" class="card" style="max-width: 15%; ">
+            <img class="card-img-top" width="100%" src="~/images/Roger_Smith.png" alt="choice">
+            <div class="card-body">
+                <h3 class="card-title">Roger Smith</h3>
+                <a href="#" class="btn btn-primary" id="btnRoger">Choose</a>
+            </div>
+        </div>
+        <br></br>
+        <input type="submit" value="Submit">
+    </div>
+</form>
+

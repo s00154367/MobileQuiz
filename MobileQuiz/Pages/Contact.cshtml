@@ -1,0 +1,17 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Join Game";
+}
+<h2>@ViewData["Title"]</h2>
+<div>
+    <h3>Enter Game Code: </h3>
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" id="gameCode" placeholder="Enter Game Code Here!">
+        </div>        
+        <button type="submit" class="btn btn-primary" asp-page="/CreateProfile">Submit</button>
+    </form>
+
+</div>
+
