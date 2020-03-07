@@ -49,3 +49,12 @@ body {
     background-color: #bfba4d;
     border: 2px solid #000000;
 }
+
+#profileForm > .card >img {
+    width: 200px;
+    height: 200px;
+}
+
+#character{
+    align-content:center;
+}
