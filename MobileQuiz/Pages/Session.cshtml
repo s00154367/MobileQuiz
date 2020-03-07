@@ -1,0 +1,59 @@
+﻿@page
+
+@model SessionModel
+@{
+    ViewData["Title"] = "Game";
+}
+
+<script>
+    $(document).ready(function () {
+ 
+    });
+</script>
+
+<h2>@ViewData["Title"]</h2>
+<h3>Game Code: @Model.GameCode</h3>
+<h2>@Model.DBload</h2>
+
+@foreach (var user in Model.UserList)
+{
+    <div class="card" style="max-width: 25rem; max-height: 40rem;">
+        <img class="card-img-top" width="200" height="200" src="~/images/@user.Picture" alt="Picture">
+        <div class="card-body">
+            <h3 class="card-title">@user.Name</h3>
+            <h4 class="card-text">@user.Quote</h4>
+            @if (user.Ready == "Not Ready")
+            {
+                <p class="btn btn-warning">@user.Ready</p>
+            }
+            else if(user.Ready == "Ready")
+            {
+                <p class="btn btn-success">@user.Ready</p>
+            }
+        </div>
+    </div>
+}
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Quote</th>
+            <th scope="col">Ready</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.UserList)
+        {
+
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Quote</td>
+                <td>@user.Ready</td>
+            </tr>
+        } 
+    </tbody>
+</table>
+
+
